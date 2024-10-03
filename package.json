@@ -1,0 +1,16 @@
+{
+  "name": "elements-lite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "elements-lite.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wds --node-resolve --open --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@vscode-elements/webview-playground": "^1.1.1",
+    "@web/dev-server": "^0.4.6"
+  }
+}

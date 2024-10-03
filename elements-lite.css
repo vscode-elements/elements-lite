@@ -1,0 +1,55 @@
+.vscode-select {
+  position: relative;
+  width: 320px;
+}
+
+.vscode-select select {
+  appearance: none;
+  background-color: var(--vscode-settings-dropdownBackground);
+  border-color: var(--vscode-settings-dropdownBorder);
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  color: var(--vscode-settings-dropdownForeground);
+  cursor: pointer;
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  font-weight: var(--vscode-font-weight);
+  line-height: 18px;
+  margin: 0;
+  padding: 3px 4px;
+  width: 100%;
+}
+
+.vscode-select select:focus {
+  border-color: var(--vscode-focusBorder);
+  outline: none;
+}
+
+.vscode-select.invalid select,
+.vscode-select select:invalid {
+  background-color: var(--vscode-inputValidation-errorBackground);
+  border-color: var(--vscode-inputValidation-errorBorder, #be1100);
+}
+
+.vscode-select option {
+  cursor: pointer;
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  font-weight: var(--vscode-font-weight);
+}
+
+.vscode-select option:hover {
+  background-color: red;
+}
+
+.vscode-select .chevron-icon {
+  color: var(--vscode-foreground);
+  display: block;
+  height: 14px;
+  pointer-events: none;
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  width: 14px;
+}
