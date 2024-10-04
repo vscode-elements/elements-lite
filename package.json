@@ -11,6 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "@vscode-elements/webview-playground": "^1.1.1",
+    "@vscode/codicons": "^0.0.36",
     "@web/dev-server": "^0.4.6"
   }
 }
