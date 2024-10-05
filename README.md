@@ -7,8 +7,7 @@ Pure CSS implementation of [VSCode Elements](https://vscode-elements.github.io).
 - [x] Action Button
 - [x] Badge
 - [x] Button
-- [ ] Checkbox
-- [ ] Checkbox Group
+- [x] Checkbox
 - [x] Collapsible
 - [ ] Divider
 - [ ] Form Group
@@ -17,9 +16,7 @@ Pure CSS implementation of [VSCode Elements](https://vscode-elements.github.io).
 - [x] Select
 - [ ] Progress Ring
 - [ ] Radio
-- [ ] Radio Group
 - [ ] Scrollable
-- [ ] Tabs
 - [ ] Table
 - [ ] Textarea
 - [x] Textfield

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox - VSCode Elements Lite</title>
+    <link rel="stylesheet" href="/node_modules/@vscode/codicons/dist/codicon.css">
+    <link rel="stylesheet" href="/index.css">
+    <script type="module" src="/node_modules/@vscode-elements/webview-playground/dist/index.js"></script>
+  </head>
+
+  <body>
+    <h1>Checkbox</h1>
+
+    <h2>Indeterminate Checkbox</h2>
+    <vscode-demo>
+      <div class="vscode-checkbox">
+        <input type="checkbox" id="checkbox-1">
+        <label for="checkbox-1">
+          <span>
+            <i class="codicon codicon-check"></i>
+            <i class="codicon codicon-chrome-minimize"></i>
+          </span>
+          <span>
+            Checkbox example
+            <br>
+            Second line
+          </span>
+        </label>
+      </div>
+      <script type="module">
+        document.querySelector("#checkbox-1").indeterminate = true;
+      </script>
+    </vscode-demo>
+
+    <h2>Checkbox Group - Horizontal</h2>
+    <vscode-demo>
+      <div class="vscode-checkbox-group">
+        <div class="vscode-checkbox">
+          <input type="checkbox" id="group-1-checkbox-1">
+          <label for="group-1-checkbox-1">
+            <span>
+              <i class="codicon codicon-check"></i>
+              <i class="codicon codicon-chrome-minimize"></i>
+            </span>
+            <span>Lorem</span>
+          </label>
+        </div>
+        <div class="vscode-checkbox">
+          <input type="checkbox" id="group-1-checkbox-2">
+          <label for="group-1-checkbox-2">
+            <span>
+              <i class="codicon codicon-check"></i>
+              <i class="codicon codicon-chrome-minimize"></i>
+            </span>
+            <span>Ipsum</span>
+          </label>
+        </div>
+        <div class="vscode-checkbox">
+          <input type="checkbox" id="group-1-checkbox-3">
+          <label for="group-1-checkbox-3">
+            <span>
+              <i class="codicon codicon-check"></i>
+              <i class="codicon codicon-chrome-minimize"></i>
+            </span>
+            <span>Dolor</span>
+          </label>
+        </div>
+      </div>
+    </vscode-demo>
+
+    <h2>Checkbox Group - Vertical</h2>
+    <vscode-demo>
+      <div class="vscode-checkbox-group vertical">
+        <div class="vscode-checkbox">
+          <input type="checkbox" id="group-2-checkbox-1">
+          <label for="group-2-checkbox-1">
+            <span>
+              <i class="codicon codicon-check"></i>
+              <i class="codicon codicon-chrome-minimize"></i>
+            </span>
+            <span>Lorem</span>
+          </label>
+        </div>
+        <div class="vscode-checkbox">
+          <input type="checkbox" id="group-2-checkbox-2">
+          <label for="group-2-checkbox-2">
+            <span>
+              <i class="codicon codicon-check"></i>
+              <i class="codicon codicon-chrome-minimize"></i>
+            </span>
+            <span>Ipsum</span>
+          </label>
+        </div>
+        <div class="vscode-checkbox">
+          <input type="checkbox" id="group-2-checkbox-3">
+          <label for="group-2-checkbox-3">
+            <span>
+              <i class="codicon codicon-check"></i>
+              <i class="codicon codicon-chrome-minimize"></i>
+            </span>
+            <span>Dolor</span>
+          </label>
+        </div>
+      </div>
+    </vscode-demo>
+
+    <h2>:invalid Checkbox</h2>
+    <vscode-demo>
+      <div class="vscode-checkbox">
+        <input type="checkbox" id="invalid-checkbox-1" required>
+        <label for="invalid-checkbox-1">
+          <span>
+            <i class="codicon codicon-check"></i>
+            <i class="codicon codicon-chrome-minimize"></i>
+          </span>
+          <span>Lorem</span>
+        </label>
+      </div>
+    </vscode-demo>
+
+    <h2>.invalid Checkbox</h2>
+    <vscode-demo>
+      <div class="vscode-checkbox">
+        <input type="checkbox" id="invalid-checkbox-2" required class="invalid">
+        <label for="invalid-checkbox-2">
+          <span>
+            <i class="codicon codicon-check"></i>
+            <i class="codicon codicon-chrome-minimize"></i>
+          </span>
+          <span>Lorem</span>
+        </label>
+      </div>
+    </vscode-demo>
+  </body>
+</html>

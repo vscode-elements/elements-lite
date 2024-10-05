@@ -1,0 +1,91 @@
+.vscode-checkbox {
+  display: inline-flex;
+  position: relative;
+  user-select: none;
+}
+
+.vscode-checkbox input[type="checkbox"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.vscode-checkbox .codicon-check,
+.vscode-checkbox .codicon-chrome-minimize {
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+}
+
+.vscode-checkbox input[type="checkbox"]:checked + label .codicon-check {
+  visibility: visible;
+}
+
+.vscode-checkbox input[type="checkbox"]:indeterminate + label .codicon-chrome-minimize {
+  visibility: visible;
+}
+
+.vscode-checkbox span:nth-of-type(1) {
+  align-items: center;
+  background-color: var(--vscode-settings-checkboxBackground);
+  background-size: 16px;
+  border: 1px solid var(--vscode-settings-checkboxBorder);
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: var(--vscode-settings-checkboxForeground);
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 9px;
+  padding: 0;
+  pointer-events: none;
+  position: relative;
+  width: 18px;
+}
+
+.vscode-checkbox input[type="checkbox"]:invalid + label span:nth-of-type(1),
+.vscode-checkbox input[type="checkbox"].invalid + label span:nth-of-type(1) {
+  background-color: var(--vscode-inputValidation-errorBackground);
+  border-color: var(--vscode-inputValidation-errorBorder, #be1100);
+}
+
+.vscode-checkbox input[type="checkbox"]:focus + label span:nth-of-type(1) {
+  border-color: var(--vscode-focusBorder);
+}
+
+.vscode-checkbox label {
+  cursor: pointer;
+  display: inline-flex;
+  line-height: 18px;
+}
+
+.vscode-checkbox span:nth-of-type(2) {
+  opacity: 0.9;
+}
+
+.vscode-checkbox-group {
+  display: flex;
+}
+
+.vscode-checkbox-group .vscode-checkbox {
+  display: block;
+}
+
+.vscode-checkbox-group .vscode-checkbox:not(:last-child) {
+  margin-right: 20px;
+}
+
+.vscode-checkbox-group.vertical {
+  flex-direction: column;
+}
+
+.vscode-checkbox-group .vscode-checkbox {
+  margin-right: 0;
+  margin-bottom: 15px;
+}
