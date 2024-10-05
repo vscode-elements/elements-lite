@@ -5,7 +5,7 @@ Pure CSS implementation of [VSCode Elements](https://vscode-elements.github.io).
 ## TODO
 
 - [x] Action Button
-- [ ] Badge
+- [x] Badge
 - [ ] Button
 - [ ] Checkbox
 - [ ] Checkbox Group

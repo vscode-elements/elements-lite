@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>%%COMPONENT%% - VSCode Elements Lite</title>
+  <title>Badge - VSCode Elements Lite</title>
   <link rel="stylesheet" href="/node_modules/@vscode/codicons/dist/codicon.css">
   <link rel="stylesheet" href="/index.css">
   <script type="module" src="/node_modules/@vscode-elements/webview-playground/dist/index.js"></script>
@@ -12,10 +12,18 @@
 
 <body>
 
-  <h1>%%COMPONENT%%</h1>
+  <h1>Badge</h1>
 
   <vscode-demo>
-    <!--  -->
+    <span class="vscode-badge">308 Settings Found</span>
+  </vscode-demo>
+
+  <vscode-demo>
+    <span class="vscode-badge counter">42</span>
+  </vscode-demo>
+
+  <vscode-demo>
+    <span class="vscode-badge activity-bar-counter">42</span>
   </vscode-demo>
 
 </body>
