@@ -6,7 +6,7 @@ Pure CSS implementation of [VSCode Elements](https://vscode-elements.github.io).
 
 - [x] Action Button
 - [x] Badge
-- [ ] Button
+- [x] Button
 - [ ] Checkbox
 - [ ] Checkbox Group
 - [x] Collapsible
