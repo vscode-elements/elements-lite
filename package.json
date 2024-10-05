@@ -5,13 +5,17 @@
   "main": "elements-lite.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "wds --node-resolve --open --watch"
+    "start": "wds --node-resolve --open --watch",
+    "lint": "prettier . --check",
+    "format": "prettier . --fix"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@awmottaz/prettier-plugin-void-html": "^1.6.1",
     "@vscode-elements/webview-playground": "^1.1.1",
     "@vscode/codicons": "^0.0.36",
-    "@web/dev-server": "^0.4.6"
+    "@web/dev-server": "^0.4.6",
+    "prettier": "^3.3.3"
   }
 }
