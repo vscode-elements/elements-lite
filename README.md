@@ -22,7 +22,7 @@ Pure CSS implementation of [VSCode Elements](https://vscode-elements.github.io).
 - [ ] Tabs
 - [ ] Table
 - [ ] Textarea
-- [ ] Textfield
+- [x] Textfield
 
 ---
 
