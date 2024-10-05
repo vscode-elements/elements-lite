@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textfield - VSCode Elements Lite</title>
+    <link rel="stylesheet" href="/node_modules/@vscode/codicons/dist/codicon.css">
+    <link rel="stylesheet" href="/index.css">
+    <script type="module" src="/node_modules/@vscode-elements/webview-playground/dist/index.js"></script>
+  </head>
+
+  <body>
+    <h1>Textfield</h1>
+
+    <vscode-demo>
+      <input type="text" class="vscode-textfield">
+    </vscode-demo>
+
+    <vscode-demo>
+      <input type="email" class="vscode-textfield" placeholder="info@example.org" required>
+    </vscode-demo>
+
+    <vscode-demo>
+      <div class="vscode-textfield">
+        <i class="codicon codicon-search"></i>
+        <input type="text" required>
+        <button class="vscode-action-button" title="Math Case"><i class="codicon codicon-case-sensitive"></i></button>
+        <button class="vscode-action-button" title="Math Whole Word"><i class="codicon codicon-whole-word"></i></button>
+        <button class="vscode-action-button" title="Use Regular Expression">
+          <i class="codicon codicon-regex"></i>
+        </button>
+      </div>
+    </vscode-demo>
+
+    <vscode-demo>
+      <input type="file" class="vscode-textfield">
+    </vscode-demo>
+
+    <vscode-demo>
+      <div class="vscode-textfield">
+        <i class="codicon codicon-cloud-upload"></i>
+        <i class="codicon codicon-cloud-upload"></i>
+        <input type="file" required>
+        <i class="codicon codicon-cloud-upload"></i>
+        <i class="codicon codicon-cloud-upload"></i>
+        <button class="vscode-action-button" title="Reset">
+          <i class="codicon codicon-close"></i>
+        </button>
+      </div>
+    </vscode-demo>
+  </body>
+</html>
