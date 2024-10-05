@@ -36,10 +36,7 @@
 .vscode-button.secondary {
   color: var(--vscode-button-secondaryForeground);
   background-color: var(--vscode-button-secondaryBackground);
-  border-color: var(
-    --vscode-button-border,
-    var(--vscode-button-secondaryBackground)
-  );
+  border-color: var(--vscode-button-border, var(--vscode-button-secondaryBackground));
 }
 
 .vscode-button.secondary:hover {
@@ -66,7 +63,7 @@
 }
 
 .vscode-button.secondary:disabled {
-  background-color: var(--vscode-button-secondaryBackground);;
+  background-color: var(--vscode-button-secondaryBackground);
 }
 
 .vscode-button.secondary:disabled:hover {
