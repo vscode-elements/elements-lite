@@ -1,0 +1,87 @@
+.vscode-radio {
+  display: inline-flex;
+  position: relative;
+  user-select: none;
+}
+
+.vscode-radio input[type="radio"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.vscode-radio .icon {
+  align-items: center;
+  background-color: var(--vscode-settings-checkboxBackground);
+  background-size: 16px;
+  border: 1px solid var(--vscode-settings-checkboxBorder);
+  border-radius: 100%;
+  box-sizing: border-box;
+  color: var(--vscode-settings-checkboxForeground);
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 9px;
+  padding: 0;
+  pointer-events: none;
+  position: relative;
+  width: 18px;
+}
+
+.vscode-radio input[type="radio"]:checked + label .icon:before {
+  background-color: currentColor;
+  border-radius: 4px;
+  content: "";
+  height: 8px;
+  left: 50%;
+  margin: -4px 0 0 -4px;
+  position: absolute;
+  top: 50%;
+  width: 8px;
+}
+
+.vscode-radio input[type="radio"]:invalid + label .icon,
+.vscode-radio input[type="radio"].invalid + label .icon {
+  background-color: var(--vscode-inputValidation-errorBackground);
+  border-color: var(--vscode-inputValidation-errorBorder, #be1100);
+}
+
+.vscode-radio input[type="radio"]:focus + label .icon {
+  border-color: var(--vscode-focusBorder);
+}
+
+.vscode-radio label {
+  cursor: pointer;
+  display: inline-flex;
+  line-height: 18px;
+}
+
+.vscode-radio label .text {
+  opacity: 0.9;
+}
+
+.vscode-radio-group {
+  display: flex;
+}
+
+.vscode-radio-group .vscode-radio {
+  display: block;
+}
+
+.vscode-radio-group .vscode-radio:not(:last-child) {
+  margin-right: 20px;
+}
+
+.vscode-radio-group.vertical {
+  flex-direction: column;
+}
+
+.vscode-radio-group .vscode-radio {
+  margin-right: 0;
+  margin-bottom: 15px;
+}
