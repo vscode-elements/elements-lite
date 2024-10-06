@@ -30,7 +30,7 @@
   visibility: visible;
 }
 
-.vscode-checkbox span:nth-of-type(1) {
+.vscode-checkbox .icon {
   align-items: center;
   background-color: var(--vscode-settings-checkboxBackground);
   background-size: 16px;
@@ -49,13 +49,13 @@
   width: 18px;
 }
 
-.vscode-checkbox input[type="checkbox"]:invalid + label span:nth-of-type(1),
-.vscode-checkbox input[type="checkbox"].invalid + label span:nth-of-type(1) {
+.vscode-checkbox input[type="checkbox"]:invalid + label .icon,
+.vscode-checkbox input[type="checkbox"].invalid + label .icon {
   background-color: var(--vscode-inputValidation-errorBackground);
   border-color: var(--vscode-inputValidation-errorBorder, #be1100);
 }
 
-.vscode-checkbox input[type="checkbox"]:focus + label span:nth-of-type(1) {
+.vscode-checkbox input[type="checkbox"]:focus + label .icon {
   border-color: var(--vscode-focusBorder);
 }
 
@@ -65,7 +65,7 @@
   line-height: 18px;
 }
 
-.vscode-checkbox span:nth-of-type(2) {
+.vscode-checkbox .text {
   opacity: 0.9;
 }
 
