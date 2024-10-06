@@ -15,7 +15,7 @@ Pure CSS implementation of [VSCode Elements](https://vscode-elements.github.io).
 - [ ] Label
 - [x] Select
 - [ ] Progress Ring
-- [ ] Radio
+- [x] Radio
 - [ ] Scrollable
 - [ ] Table
 - [ ] Textarea
