@@ -1,0 +1,21 @@
+---
+title: Badge
+---
+
+import { Code } from "@astrojs/starlight/components";
+import VscodeDemo from "../../components/VscodeDemo.astro";
+
+export const html = String.raw;
+
+export const example1 = html`
+<span class="vscode-badge">308 Settings Found</span>
+`;
+export const highlights1 = ["span"];
+
+## Basic example
+
+<VscodeDemo>
+  <span class="vscode-badge">308 Settings Found</span>
+</VscodeDemo>
+
+<Code code={example1} lang="html" />
