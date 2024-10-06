@@ -12,6 +12,13 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
+					label: 'Components',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Badge', slug: 'components/badge' },
+					],
+				},
+				{
 					label: 'Guides',
 					items: [
 						// Each item here is one entry in the navigation menu.
