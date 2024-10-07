@@ -13,7 +13,7 @@ A partial, pure CSS implementation of [VSCode Elements](https://vscode-elements.
 - [ ] Form Group
 - [ ] Form Helper
 - [ ] Label
-- [x] Select
+- [x] Select (with limitations)
 - [ ] Progress Ring
 - [x] Radio
 - [ ] Scrollable
