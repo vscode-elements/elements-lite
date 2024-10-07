@@ -1,0 +1,53 @@
+---
+title: Action Button
+---
+
+import "@vscode/codicons/dist/codicon.css";
+import "@vscode-elements/elements-lite/components/action-button/action-button.css";
+import cssSource from "@vscode-elements/elements-lite/components/action-button/action-button.css?raw";
+import { Code } from "@astrojs/starlight/components";
+import VscodeDemo from "../../components/VscodeDemo.astro";
+
+Buttons placed on a toolbar with or without label.
+
+## Basic example
+
+<VscodeDemo>
+  <button type="button" class="vscode-action-button" title="File">
+    <i class="codicon codicon-file" aria-hidden="true"></i>
+  </button>
+</VscodeDemo>
+
+```html
+<button type="button" class="vscode-action-button" title="File">
+  <i class="codicon codicon-file" aria-hidden="true"></i>
+</button>
+```
+
+## With label
+
+<VscodeDemo>
+  <button type="button" class="vscode-action-button">
+    <i class="codicon codicon-plus" aria-hidden="true"></i>
+    <span class="label">Markdown</span>
+  </button>
+</VscodeDemo>
+
+```html
+<button type="button" class="vscode-action-button">
+  <i class="codicon codicon-plus" aria-hidden="true"></i>
+  <span class="label">Markdown</span>
+</button>
+```
+
+## Disabled state
+
+<VscodeDemo>
+  <button type="button" class="vscode-action-button" title="File" disabled="disabled">
+    <i class="codicon codicon-file" aria-hidden="true"></i>
+  </button>
+</VscodeDemo>
+
+## CSS
+
+<Code code={cssSource} lang="css" />

@@ -2,15 +2,12 @@
 title: Badge
 ---
 
+import "@vscode-elements/elements-lite/components/badge/badge.css";
+import cssSource from "@vscode-elements/elements-lite/components/badge/badge.css?raw";
 import { Code } from "@astrojs/starlight/components";
 import VscodeDemo from "../../components/VscodeDemo.astro";
 
-export const html = String.raw;
-
-export const example1 = html`
-<span class="vscode-badge">308 Settings Found</span>
-`;
-export const highlights1 = ["span"];
+Indicates status information from the system.
 
 ## Basic example
 
@@ -18,4 +15,32 @@ export const highlights1 = ["span"];
   <span class="vscode-badge">308 Settings Found</span>
 </VscodeDemo>
 
-<Code code={example1} lang="html" />
+```html
+<span class="vscode-badge">308 Settings Found</span>
+```
+
+## Counter
+
+<VscodeDemo>
+  <span class="vscode-badge counter">42</span>
+</VscodeDemo>
+
+```html "counter"
+<span class="vscode-badge counter">42</span>
+```
+
+## Activity Bar Counter
+
+The same style as the counters in the activity bar.
+
+<VscodeDemo>
+  <span class="vscode-badge activity-bar-counter">42</span>
+</VscodeDemo>
+
+```html "activity-bar-counter"
+<span class="vscode-badge activity-bar-counter">42</span>
+```
+
+## CSS
+
+<Code code={cssSource} lang="css" />
