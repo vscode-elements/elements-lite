@@ -1,6 +1,6 @@
 # VSCode Elements Lite
 
-Pure CSS implementation of [VSCode Elements](https://vscode-elements.github.io).
+A partial, pure CSS implementation of [VSCode Elements](https://vscode-elements.github.io), including only components that don't require JavaScript.
 
 ## TODO
 
