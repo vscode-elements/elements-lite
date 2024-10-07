@@ -9,6 +9,13 @@
   display: inline-flex;
   cursor: pointer;
   padding: 0;
+  user-select: none;
+}
+
+.vscode-action-button:disabled {
+  color: var(--vscode-disabledForeground);
+  cursor: default;
+  pointer-events: none;
 }
 
 .vscode-action-button .codicon {
@@ -17,11 +24,8 @@
   padding: 2px;
 }
 
-.vscode-action-button svg {
-  display: block;
-  height: 16px;
-  width: 16px;
-  padding: 2px;
+.vscode-action-button:disabled .codicon {
+  color: var(--vscode-disabledForeground);
 }
 
 .vscode-action-button:hover {
