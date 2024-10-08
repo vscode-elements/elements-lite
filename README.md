@@ -9,7 +9,7 @@ A partial, pure CSS implementation of [VSCode Elements](https://vscode-elements.
 - [x] Button
 - [x] Checkbox
 - [x] Collapsible
-- [ ] Divider
+- [x] Divider
 - [ ] Form Group
 - [ ] Form Helper
 - [ ] Label
