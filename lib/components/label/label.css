@@ -1,0 +1,23 @@
+.vscode-label {
+  color: var(--vscode-settings-headerForeground);
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  font-weight: 600;
+  line-height: 1.4em;
+  cursor: default;
+  display: block;
+  padding: 5px 0;
+}
+
+.vscode-label .pale {
+  color: var(--vscode-settings-headerForeground);
+  opacity: .9;
+}
+
+.vscode-label .normal {
+  font-weight: normal;
+}
+
+.vscode-label .italic {
+  font-style: italic;
+}
