@@ -5,7 +5,7 @@
   "main": "elements-lite.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "wds --node-resolve --open --watch",
+    "start": "wds --node-resolve --watch",
     "prettier": "prettier . --check",
     "prettier:write": "prettier . --write"
   },

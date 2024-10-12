@@ -10,9 +10,9 @@ A partial, pure CSS implementation of [VSCode Elements](https://vscode-elements.
 - [x] Checkbox
 - [x] Collapsible
 - [x] Divider
-- [ ] Form Group
-- [ ] Form Helper
-- [ ] Label
+- [x] Form Group
+- [x] Form Helper
+- [x] Label
 - [x] Select (with limitations)
 - [ ] Progress Ring
 - [x] Radio
