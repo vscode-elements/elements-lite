@@ -15,7 +15,7 @@ A partial, pure CSS implementation of [VSCode Elements](https://vscode-elements.
 - [x] Form Helper
 - [x] Label
 - [x] Select (with limitations)
-- [ ] Progress Ring
+- [x] Progress Ring
 - [x] Radio
 - [ ] Scrollable
 - [ ] Table
