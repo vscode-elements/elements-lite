@@ -1,0 +1,40 @@
+.vscode-progress-ring {
+  align-items: center;
+  display: inline-block;
+  height: 28px;
+  margin: 0;
+  outline: none;
+  width: 28px;
+}
+
+.vscode-progress-ring .background {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 2px;
+}
+
+.vscode-progress-ring .indicator {
+  fill: none;
+  stroke: var(--vscode-progressBar-background);
+  stroke-width: 2px;
+  stroke-linecap: square;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+  transition: all 0.2s ease-in-out;
+  animation: vscode-progress-ring-spin 2s linear infinite;
+}
+
+@keyframes vscode-progress-ring-spin {
+  0% {
+    stroke-dasharray: 0.01px 43.97px;
+    transform: rotate(0deg);
+  }
+  50% {
+    stroke-dasharray: 21.99px 21.99px;
+    transform: rotate(450deg);
+  }
+  100% {
+    stroke-dasharray: 0.01px 43.97px;
+    transform: rotate(1080deg);
+  }
+}
