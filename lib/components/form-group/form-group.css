@@ -1,11 +1,18 @@
 .vscode-form-group {
   --label-right-margin: 14px;
   --label-width: 150px;
+  --breakpoint: 320px;
 
   display: flex;
   flex-wrap: wrap;
   margin: 15px 0;
   max-width: 727px;
+}
+
+@container (width < 484px) {
+  .vscode-form-group {
+    display: block;
+  }
 }
 
 .vscode-form-group.settings-group {
@@ -42,6 +49,12 @@
   margin-left: calc(var(--label-width) + var(--label-right-margin));
 }
 
+@container (width < 484px) {
+  .vscode-form-group .vscode-form-helper {
+    margin-left: 0;
+  }
+}
+
 .vscode-form-group.vertical .vscode-form-helper,
 .vscode-form-group.settings-group .vscode-form-helper {
   display: block;
@@ -58,6 +71,14 @@
   display: block;
   margin-left: 0;
   text-align: left;
+}
+
+@container (width < 484px) {
+  .vscode-form-group .vscode-label {
+    display: block;
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
 .vscode-form-group.settings-group .vscode-textfield,

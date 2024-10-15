@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Group - VSCode Elements Lite</title>
-    <link rel="stylesheet" href="/node_modules/@vscode/codicons/dist/codicon.css">
-    <link rel="stylesheet" href="/index.css">
-    <script type="module" src="/node_modules/@vscode-elements/webview-playground/dist/index.js"></script>
-  </head>
 
-  <body>
-    <h1>Form Group</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Group - VSCode Elements Lite</title>
+  <link rel="stylesheet" href="/node_modules/@vscode/codicons/dist/codicon.css">
+  <link rel="stylesheet" href="/index.css">
+  <script type="module" src="/node_modules/@vscode-elements/webview-playground/dist/index.js"></script>
+</head>
 
-    <vscode-demo>
+<body>
+  <h1>Form Group</h1>
+
+  <vscode-demo>
+    <div class="vscode-form-container">
       <div class="vscode-form-group">
         <label for="textfield1" class="vscode-label">Label example</label>
         <input type="text" id="textfield1" class="vscode-textfield">
@@ -25,30 +27,32 @@
           </p>
         </div>
       </div>
-      <div class="vscode-form-group settings-group">
-        <label for="textfield2" class="vscode-label">Label example</label>
-        <div class="vscode-form-helper">
-          <p>
-            Lorem ipsum <code>let dolor = sit amet</code>, consectetur
-            adipiscing elit.
-            <span class="error">Suspendisse</span> faucibus imperdiet
-            sapien, a gravida <a href="#">dolor</a>.
-          </p>
-        </div>
-        <input type="text" id="textfield2" class="vscode-textfield">
+    </div>
+    <div class="vscode-form-group settings-group">
+      <label for="textfield2" class="vscode-label">Label example</label>
+      <div class="vscode-form-helper">
+        <p>
+          Lorem ipsum <code>let dolor = sit amet</code>, consectetur
+          adipiscing elit.
+          <span class="error">Suspendisse</span> faucibus imperdiet
+          sapien, a gravida <a href="#">dolor</a>.
+        </p>
       </div>
-      <div class="vscode-form-group vertical">
-        <label for="textfield3" class="vscode-label">Label example</label>
-        <input type="text" id="textfield3" class="vscode-textfield">
-        <div class="vscode-form-helper">
-          <p>
-            Lorem ipsum <code>let dolor = sit amet</code>, consectetur
-            adipiscing elit.
-            <span class="error">Suspendisse</span> faucibus imperdiet
-            sapien, a gravida <a href="#">dolor</a>.
-          </p>
-        </div>
+      <input type="text" id="textfield2" class="vscode-textfield">
+    </div>
+    <div class="vscode-form-group vertical">
+      <label for="textfield3" class="vscode-label">Label example</label>
+      <input type="text" id="textfield3" class="vscode-textfield">
+      <div class="vscode-form-helper">
+        <p>
+          Lorem ipsum <code>let dolor = sit amet</code>, consectetur
+          adipiscing elit.
+          <span class="error">Suspendisse</span> faucibus imperdiet
+          sapien, a gravida <a href="#">dolor</a>.
+        </p>
       </div>
-    </vscode-demo>
-  </body>
+    </div>
+  </vscode-demo>
+</body>
+
 </html>
