@@ -5,3 +5,15 @@
   max-width: 720px;
   opacity: 0.9;
 }
+
+.vscode-form-helper p:first-child,
+.vscode-form-helper ul:first-child,
+.vscode-form-helper ol:first-child {
+  margin-top: 0;
+}
+
+.vscode-form-helper p:last-child,
+.vscode-form-helper ul:last-child,
+.vscode-form-helper ol:last-child {
+  margin-bottom: 0;
+}

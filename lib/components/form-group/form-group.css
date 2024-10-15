@@ -1,0 +1,76 @@
+.vscode-form-group {
+  --label-right-margin: 14px;
+  --label-width: 150px;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 0;
+  max-width: 727px;
+}
+
+.vscode-form-group.settings-group {
+  margin: 0;
+  padding: 12px 14px 18px;
+  max-width: 727px;
+}
+
+.vscode-form-group.settings-group,
+.vscode-form-group.vertical {
+  display: block;
+}
+
+.vscode-form-group .vscode-checkbox-group,
+.vscode-form-group .vscode-radio-group {
+  width: calc(100% - calc(var(--label-width) + var(--label-right-margin)));
+}
+
+.vscode-form-group .vscode-label {
+  margin-right: var(--label-right-margin);
+  text-align: right;
+  width: var(--label-width);
+}
+
+.vscode-form-group.settings-group .vscode-label {
+  height: 18px;
+  line-height: 18px;
+  margin-bottom: 4px;
+  margin-right: 0;
+  padding: 0;
+}
+
+.vscode-form-group .vscode-form-helper {
+  margin-left: calc(var(--label-width) + var(--label-right-margin));
+}
+
+.vscode-form-group.vertical .vscode-form-helper,
+.vscode-form-group.settings-group .vscode-form-helper {
+  display: block;
+  margin-left: 0;
+}
+
+.vscode-form-group.settings-group .vscode-form-helper {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.vscode-form-group.vertical .vscode-label,
+.vscode-form-group.settings-group .vscode-label {
+  display: block;
+  margin-left: 0;
+  text-align: left;
+}
+
+.vscode-form-group.settings-group .vscode-textfield,
+.vscode-form-group.settings-group .vscode-textarea,
+.vscode-form-group.settings-group .vscode-select {
+  margin-top: 9px;
+}
+
+.vscode-form-group.vertical .vscode-button:first-child,
+.vscode-form-group.settings-group .vscode-button:first-child {
+  margin-left: calc(var(--label-width) + var(--label-right-margin));
+}
+
+.vscode-from-group .vscode-button {
+  margin-right: 4px;
+}
