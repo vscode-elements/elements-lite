@@ -39,10 +39,6 @@
   font-weight: var(--vscode-font-weight);
 }
 
-.vscode-select option:hover {
-  background-color: red;
-}
-
 .vscode-select .chevron-icon {
   color: var(--vscode-foreground);
   display: block;
@@ -52,4 +48,37 @@
   right: 8px;
   top: 5px;
   width: 14px;
+}
+
+.vscode-select select[multiple] {
+  padding: 0;
+}
+
+.vscode-select select[multiple] + .chevron-icon {
+  display: none;
+}
+
+.vscode-select select[multiple] option {
+  color: var(--vscode-foreground);
+  cursor: pointer;
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  font-weight: var(--vscode-font-weight);
+  line-height: 18px;
+  padding: 2px 3px;
+}
+
+.vscode-select select[multiple] option:hover {
+  background-color: var(--vscode-list-hoverBackground);
+  color: var(--vscode-list-hoverForeground);
+}
+
+.vscode-select select[multiple] option:checked {
+  background-color: var(--vscode-list-hoverBackground) !important;
+  color: var(--vscode-list-hoverForeground) !important;
+}
+
+.vscode-select select[multiple]:focus option:checked {
+  background-color: var(--vscode-list-activeSelectionBackground) !important;
+  color: var(--vscode-list-activeSelectionForeground) !important;
 }
