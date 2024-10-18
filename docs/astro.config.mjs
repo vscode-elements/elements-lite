@@ -20,6 +20,7 @@ export default defineConfig({
             // Each item here is one entry in the navigation menu.
             { label: "Action Button", slug: "components/action-button" },
             { label: "Badge", slug: "components/badge" },
+            { label: "Button", slug: "components/button" },
           ],
         },
         {
