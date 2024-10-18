@@ -11,11 +11,16 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^3.6.2",
     "@astrojs/starlight": "^0.28.2",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
     "@vscode-elements/elements-lite": "^0.1.0",
     "@vscode-elements/webview-playground": "^1.1.2",
     "@vscode/codicons": "^0.0.36",
     "astro": "^4.15.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sharp": "^0.32.5",
     "typescript": "^5.6.2"
   }
