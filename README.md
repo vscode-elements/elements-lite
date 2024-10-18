@@ -19,7 +19,7 @@ A partial, pure CSS implementation of [VSCode Elements](https://vscode-elements.
 - [x] Radio
 - [ ] Scrollable
 - [ ] Table
-- [ ] Textarea
+- [x] Textarea
 - [x] Textfield
 
 ---
