@@ -1,0 +1,103 @@
+.IconPicker {
+  display: flex;
+  position: relative;
+}
+
+.dropdown {
+  background-color: var(--sl-color-black);
+  border: 1px solid var(--sl-color-gray-5);
+  color: var(--sl-color-white);
+  margin-top: 3px;
+  padding: 8px;
+  position: absolute;
+  top: 100%;
+  width: 360px;
+  z-index: 1;
+}
+
+.dropdown .formControl {
+  margin-bottom: 8px;
+}
+
+.dropdown input {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 13px;
+  padding: 8px;
+  width: 100%;
+}
+
+.dropdown ul {
+  display: flex;
+  flex-wrap: wrap;
+  height: 128px;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.dropdown ul:after {
+  content: "";
+  flex: auto;
+}
+
+.dropdown li {
+  display: block;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+}
+
+.dropdownButtons {
+  margin-top: 8px;
+}
+
+.dropdownButtons .actionButton {
+  margin-left: auto;
+}
+
+.buttons {
+  display: flex;
+}
+
+.iconButton {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 32px;
+}
+
+.iconButton:hover,
+.iconButton.selected {
+  background-color: var(--sl-color-gray-6);
+}
+
+.buttons .actionButton {
+  margin-right: 4px;
+}
+
+.actionButton {
+  align-items: center;
+  background-color: var(--sl-color-gray-6);
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  font-size: 13px;
+  padding: 1px 7px;
+}
+
+.actionButton :global(.codicon) {
+  margin-right: 3px;
+}

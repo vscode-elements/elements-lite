@@ -79,15 +79,22 @@
   width: 100%;
 }
 
-.vscode-button .codicon {
+.vscode-button .icon svg {
+  display: block;
+}
+
+.vscode-button .codicon,
+.vscode-button .icon {
   margin-left: 3px;
   margin-right: 3px;
 }
 
-.vscode-button .codicon:first-child {
+.vscode-button .codicon:first-child,
+.vscode-button .icon:first-child {
   margin-left: 0;
 }
 
-.vscode-button .codicon:last-child {
+.vscode-button .codicon:last-child,
+.vscode-button .icon:last-child {
   margin-right: 0;
 }
