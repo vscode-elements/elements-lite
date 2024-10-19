@@ -1,0 +1,50 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const hasTrailingSlash = pathname.endsWith("/");
+const isConfigurator = hasTrailingSlash
+  ? pathname.endsWith("configurator/")
+  : pathname.endsWith("configurator");
+const componentName = Astro.url.pathname.split("/")[2];
+const docsUrl = `/components/${componentName}${hasTrailingSlash ? "/" : ""}`;
+const confUrl = `/components/${componentName}/configurator${hasTrailingSlash ? "/" : ""}`;
+---
+
+<style>
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    border-radius: 0.25rem;
+    color: inherit;
+    display: inline-block;
+    font-size: var(--sl-text-sm);
+    line-height: 1.4;
+    padding: 0.3em 0.5rem;
+    text-decoration: none;
+  }
+
+  a.active {
+    background-color: var(--sl-color-text-accent);
+    color: var(--sl-color-text-invert);
+    font-weight: 600;
+  }
+</style>
+
+<ul class="not-content">
+  <li>
+    <a
+      href={docsUrl}
+      class={!isConfigurator ? "active" : null}>Docs</a
+    >
+  </li>
+  <li>
+    <a
+      href={confUrl}
+      class={isConfigurator ? "active" : null}>Configurator</a
+    >
+  </li>
+</ul>
