@@ -1,11 +1,11 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-
 import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://vscode-elements.github.io/elements-lite',
   integrations: [
     starlight({
       title: "VSCode Elements Lite",
@@ -26,15 +26,8 @@ export default defineConfig({
           ],
         },
         {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: "Example Guide", slug: "guides/example" },
-          ],
-        },
-        {
-          label: "Reference",
-          autogenerate: { directory: "reference" },
+          label: "Configurator",
+          items: [{ label: "Button", slug: "components/button/configurator" }],
         },
       ],
       customCss: [
