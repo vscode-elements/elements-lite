@@ -1,4 +1,5 @@
 .ConfiguratorBase {
   border: 1px solid var(--sl-color-gray-5);
+  margin-top: 1rem;
   padding: 16px;
 }

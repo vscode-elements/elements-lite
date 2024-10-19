@@ -15,33 +15,31 @@ export default function ButtonConfigurator() {
 
   return (
     <ConfiguratorBase>
-      <div className="not-content">
-        <IconPicker
-          label="Icon Before"
-          setState={setIconBefore}
-          state={iconBefore}
-        />
-        <IconPicker
-          label="Icon After"
-          setState={setIconAfter}
-          state={iconAfter}
-        />
-        <Select
-          label="Icon Type"
-          options={["font", "svg"]}
-          setState={setIconType}
-          state={iconType}
-        />
-        <Checkbox label="Secondary" setState={setSecondary} state={secondary} />
-        <Checkbox label="Block" setState={setBlock} state={block} />
-        <ButtonPreview
-          block={block}
-          secondary={secondary}
-          iconBefore={iconBefore}
-          iconAfter={iconAfter}
-          iconType={iconType as IconType}
-        />
-      </div>
+      <IconPicker
+        label="Icon Before"
+        setState={setIconBefore}
+        state={iconBefore}
+      />
+      <IconPicker
+        label="Icon After"
+        setState={setIconAfter}
+        state={iconAfter}
+      />
+      <Select
+        label="Icon Type"
+        options={["font", "svg"]}
+        setState={setIconType}
+        state={iconType}
+      />
+      <Checkbox label="Secondary" setState={setSecondary} state={secondary} />
+      <Checkbox label="Block" setState={setBlock} state={block} />
+      <ButtonPreview
+        block={block}
+        secondary={secondary}
+        iconBefore={iconBefore}
+        iconAfter={iconAfter}
+        iconType={iconType as IconType}
+      />
     </ConfiguratorBase>
   );
 }
