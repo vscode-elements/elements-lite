@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { IconName, IconType } from "./Icon";
 import Icon from "./Icon";
+import PreviewBase from "./PreviewBase";
 
 export default function ButtonPreview({
   block,
@@ -16,7 +17,7 @@ export default function ButtonPreview({
   iconType: IconType;
 }) {
   return (
-    <vscode-demo>
+    <PreviewBase>
       <button
         type="button"
         className={clsx("vscode-button", { secondary, block })}
@@ -29,14 +30,6 @@ export default function ButtonPreview({
           <Icon name={iconAfter as IconName} iconType={iconType} />
         ) : null}
       </button>
-    </vscode-demo>
+    </PreviewBase>
   );
-}
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "vscode-demo": any;
-    }
-  }
 }
