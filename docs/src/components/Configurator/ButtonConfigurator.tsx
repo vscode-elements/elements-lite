@@ -5,8 +5,10 @@ import IconPicker from "./widgets/IconPicker";
 import Select from "./widgets/Select";
 import ButtonPreview from "./ButtonPreview";
 import ConfiguratorBase from "./widgets/ConfiguratorBase";
+import Textfield from "./widgets/Textfield";
 
 export default function ButtonConfigurator() {
+  const [caption, setCaption] = useState("Button Example");
   const [secondary, setSecondary] = useState(false);
   const [block, setBlock] = useState(false);
   const [iconBefore, setIconBefore] = useState("");
@@ -15,6 +17,7 @@ export default function ButtonConfigurator() {
 
   return (
     <ConfiguratorBase>
+      <Textfield label="Caption" state={caption} setState={setCaption} />
       <IconPicker
         label="Icon Before"
         setState={setIconBefore}
@@ -34,6 +37,7 @@ export default function ButtonConfigurator() {
       <Checkbox label="Secondary" setState={setSecondary} state={secondary} />
       <Checkbox label="Block" setState={setBlock} state={block} />
       <ButtonPreview
+        caption={caption}
         block={block}
         secondary={secondary}
         iconBefore={iconBefore}
