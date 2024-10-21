@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import type { IconName, IconType } from "./Icon";
-import Icon from "./Icon";
-import PreviewBase from "./PreviewBase";
+import type { IconName, IconType } from "./widgets/Icon";
+import Icon from "./widgets/Icon";
+import PreviewBase from "./widgets/PreviewBase";
 
 export default function ButtonPreview({
   block,
