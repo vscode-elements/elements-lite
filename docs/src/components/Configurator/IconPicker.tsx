@@ -1,11 +1,4 @@
-import {
-  useId,
-  useLayoutEffect,
-  useRef,
-  useState,
-  type ChangeEvent,
-  type MouseEvent,
-} from "react";
+import { useEffect, useId, useRef, useState, type ChangeEvent } from "react";
 import { iconNames } from "./icons";
 import styles from "./IconPicker.module.css";
 import clsx from "clsx";
@@ -24,7 +17,7 @@ export default function IconPicker({
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleClickOutside = (ev: Event) => {
       if (!(ev.target as HTMLElement).closest(`.${styles.dropdown}`)) {
         setShowDropdown(false);
@@ -45,7 +38,7 @@ export default function IconPicker({
   };
 
   return (
-    <div className={clsx(styles.IconPicker, "not-content")}>
+    <div className={clsx(styles.IconPicker, "form-group")}>
       <label htmlFor={id}>{label}</label>
       <div className={styles.buttons}>
         <button
@@ -53,7 +46,7 @@ export default function IconPicker({
             ev.stopPropagation();
             setShowDropdown(!showDropdown);
           }}
-          className={styles.actionButton}
+          className={clsx(styles.actionButton, styles.dropdownOpen)}
         >
           <i
             className={clsx("codicon", {
@@ -67,11 +60,12 @@ export default function IconPicker({
           onClick={() => {
             setState("");
           }}
-          className={styles.actionButton}
+          className={clsx(styles.actionButton, styles.reset)}
           disabled={!state}
+          title="Reset"
         >
           <i className="codicon codicon-close"></i>
-          Reset
+          <span className={styles.text}>Reset</span>
         </button>
       </div>
       {showDropdown ? (

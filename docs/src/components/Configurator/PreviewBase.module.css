@@ -1,0 +1,29 @@
+.copyButton {
+  align-items: center;
+  background-color: var(--sl-color-gray-6);
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.copyButton:hover {
+  background-color: var(--sl-color-gray-7);
+}
+
+.copyButton svg {
+  display: block;
+  height: 16px;
+  margin-right: 5px;
+  width: 16px;
+}
+
+.PreviewBase vscode-demo {
+  border: 1px solid var(--sl-color-gray-6);
+  box-shadow: none;
+  margin-bottom: 15px;
+}
+
+.PreviewBase vscode-demo::part(header) {
+  border-bottom: 1px solid var(--sl-color-gray-6);
+}

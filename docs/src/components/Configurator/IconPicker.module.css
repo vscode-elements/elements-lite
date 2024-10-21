@@ -1,16 +1,23 @@
 .IconPicker {
-  display: flex;
+  display: block;
   position: relative;
+}
+
+.IconPicker label {
+  display: block;
+  width: 100%;
 }
 
 .dropdown {
   background-color: var(--sl-color-black);
   border: 1px solid var(--sl-color-gray-5);
+  border-radius: 5px;
+  box-shadow: var(--sl-shadow-md);
   color: var(--sl-color-white);
   margin-top: 3px;
   padding: 8px;
   position: absolute;
-  top: 100%;
+  top: 60px;
   width: 360px;
   z-index: 1;
 }
@@ -21,7 +28,7 @@
 
 .dropdown input {
   border: 1px solid var(--sl-color-gray-5);
-  border-radius: 8px;
+  border-radius: 5px;
   box-sizing: border-box;
   font-size: 13px;
   padding: 8px;
@@ -83,10 +90,6 @@
   background-color: var(--sl-color-gray-6);
 }
 
-.buttons .actionButton {
-  margin-right: 4px;
-}
-
 .actionButton {
   align-items: center;
   background-color: var(--sl-color-gray-6);
@@ -95,9 +98,29 @@
   cursor: pointer;
   display: flex;
   font-size: 13px;
-  padding: 1px 7px;
+  line-height: 16px;
+  padding: 5px;
+}
+
+.buttons .actionButton.dropdownOpen {
+  border-radius: 5px 0 0 5px;
+}
+
+.buttons .actionButton.reset {
+  border-left: 1px solid var(--sl-color-gray-5);
+  border-radius: 0 5px 5px 0;
 }
 
 .actionButton :global(.codicon) {
   margin-right: 3px;
+}
+
+.text {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
