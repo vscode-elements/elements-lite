@@ -1,0 +1,23 @@
+---
+title: Action Button
+---
+
+import { Code } from "@astrojs/starlight/components";
+import ImportPlayground from "@components/ImportPlayground.astro";
+import PageSwitcher from "@components/PageSwitcher.astro";
+
+import "@vscode-elements/elements-lite/components/action-button/action-button.css";
+import ActionButtonConfigurator from "@components/Configurator/ActionButtonConfigurator";
+import cssSource from "@vscode-elements/elements-lite/components/action-button/action-button.css?raw";
+
+<ImportPlayground />
+
+<PageSwitcher />
+
+## Configurator
+
+<ActionButtonConfigurator client:load />
+
+## CSS
+
+<Code code={cssSource} lang="css" />
