@@ -1,10 +1,10 @@
 import { useState } from "react";
-import type { IconType } from "./Icon";
-import Checkbox from "./Checkbox";
-import IconPicker from "./IconPicker";
-import Select from "./Select";
+import type { IconType } from "./widgets/Icon";
+import Checkbox from "./widgets/Checkbox";
+import IconPicker from "./widgets/IconPicker";
+import Select from "./widgets/Select";
 import ButtonPreview from "./ButtonPreview";
-import ConfiguratorBase from "./ConfiguratorBase";
+import ConfiguratorBase from "./widgets/ConfiguratorBase";
 
 export default function ButtonConfigurator() {
   const [secondary, setSecondary] = useState(false);
