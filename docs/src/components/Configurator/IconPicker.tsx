@@ -1,4 +1,11 @@
-import { useId, useState, type ChangeEvent, type MouseEvent } from "react";
+import {
+  useId,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type ChangeEvent,
+  type MouseEvent,
+} from "react";
 import { iconNames } from "./icons";
 import styles from "./IconPicker.module.css";
 import clsx from "clsx";
@@ -15,6 +22,23 @@ export default function IconPicker({
   const id = useId();
   const [filter, setFilter] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    const handleClickOutside = (ev: Event) => {
+      if (!(ev.target as HTMLElement).closest(`.${styles.dropdown}`)) {
+        setShowDropdown(false);
+      }
+    };
+
+    if (showDropdown) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [showDropdown]);
 
   const handleInputChange = (ev: ChangeEvent<HTMLInputElement>) => {
     setFilter(ev.target.value);
@@ -25,7 +49,8 @@ export default function IconPicker({
       <label htmlFor={id}>{label}</label>
       <div className={styles.buttons}>
         <button
-          onClick={() => {
+          onClick={(ev) => {
+            ev.stopPropagation();
             setShowDropdown(!showDropdown);
           }}
           className={styles.actionButton}
@@ -50,7 +75,7 @@ export default function IconPicker({
         </button>
       </div>
       {showDropdown ? (
-        <div className={styles.dropdown}>
+        <div className={styles.dropdown} ref={dropdownRef}>
           <div className={styles.formControl}>
             <input
               type="text"
