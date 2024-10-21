@@ -15,6 +15,10 @@ export default defineConfig({
       social: {
         github: "https://github.com/vscode-elements/elements-lite",
       },
+      editLink: {
+        baseUrl:
+          "https://github.com/vscode-elements/elements-lite/tree/main/docs",
+      },
       sidebar: [
         {
           label: "Components",
@@ -28,7 +32,10 @@ export default defineConfig({
         {
           label: "Configurator",
           items: [
-            { label: "Action Button", slug: "components/action-button/configurator" },
+            {
+              label: "Action Button",
+              slug: "components/action-button/configurator",
+            },
             { label: "Button", slug: "components/button/configurator" },
           ],
         },
