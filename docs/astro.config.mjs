@@ -5,7 +5,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://vscode-elements.github.io/elements-lite',
+  site: "https://vscode-elements.github.io/elements-lite",
   integrations: [
     starlight({
       title: "VSCode Elements Lite",
@@ -27,7 +27,10 @@ export default defineConfig({
         },
         {
           label: "Configurator",
-          items: [{ label: "Button", slug: "components/button/configurator" }],
+          items: [
+            { label: "Action Button", slug: "components/action-button/configurator" },
+            { label: "Button", slug: "components/button/configurator" },
+          ],
         },
       ],
       customCss: [

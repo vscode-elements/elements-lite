@@ -18,13 +18,21 @@
   pointer-events: none;
 }
 
-.vscode-action-button .codicon {
+.vscode-action-button .codicon,
+.vscode-action-button .icon {
   color: var(--vscode-icon-foreground);
   display: block;
   padding: 2px;
 }
 
-.vscode-action-button:disabled .codicon {
+.vscode-action-button .icon svg {
+  display: block;
+  height: 16px;
+  width: 16px;
+}
+
+.vscode-action-button:disabled .codicon,
+.vscode-action-button:disabled .icon {
   color: var(--vscode-disabledForeground);
 }
 

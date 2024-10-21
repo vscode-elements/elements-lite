@@ -8,7 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "icons": "node scripts/generate-icons-data.js"
+    "icons": "node scripts/generate-icons-data.js",
+    "link": "npm link @vscode-elements/elements-lite"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
