@@ -1,4 +1,6 @@
 import { useId } from "react";
+import styles from "./Select.module.css";
+import clsx from "clsx";
 
 export default function Select({
   label,
@@ -14,7 +16,7 @@ export default function Select({
   const id = useId();
 
   return (
-    <div>
+    <div className={clsx(styles.Select, "form-group")}>
       <label htmlFor={id}>{label}</label>
       <select
         id={id}
