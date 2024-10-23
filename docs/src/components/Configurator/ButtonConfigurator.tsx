@@ -47,3 +47,5 @@ export default function ButtonConfigurator() {
     </ConfiguratorBase>
   );
 }
+
+ButtonConfigurator.displayName = "ButtonConfigurator";

@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "icons": "node scripts/generate-icons-data.js",
-    "link": "npm link @vscode-elements/elements-lite"
+    "link-all": "npm link @vscode-elements/elements-lite"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -19,7 +19,7 @@
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@vscode-elements/elements-lite": "^0.1.0",
-    "@vscode-elements/webview-playground": "^1.2.0",
+    "@vscode-elements/webview-playground": "^1.2.1",
     "@vscode/codicons": "^0.0.36",
     "astro": "^4.15.3",
     "clsx": "^2.1.1",

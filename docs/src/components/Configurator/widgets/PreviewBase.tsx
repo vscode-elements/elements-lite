@@ -33,7 +33,9 @@ export default function ButtonPreview({ children }: { children: ReactNode }) {
 
   return (
     <div className={styles.PreviewBase}>
-      <vscode-demo ref={demoElRef}>{children}</vscode-demo>
+      <vscode-demo ref={demoElRef} suppressHydrationWarning>
+        {children}
+      </vscode-demo>
       <button
         type="button"
         onClick={handleButtonClick}

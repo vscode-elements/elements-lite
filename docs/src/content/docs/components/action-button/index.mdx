@@ -2,11 +2,14 @@
 title: Action Button
 ---
 
-import "@vscode/codicons/dist/codicon.css";
-import "@vscode-elements/elements-lite/components/action-button/action-button.css";
-import cssSource from "@vscode-elements/elements-lite/components/action-button/action-button.css?raw";
 import { Code } from "@astrojs/starlight/components";
 import VscodeDemo from "@components/VscodeDemo.astro";
+import PageSwitcher from "@components/PageSwitcher.astro";
+
+import "@vscode/codicons/dist/codicon.css";
+import "@vscode-elements/elements-lite/components/action-button/action-button.css";
+
+<PageSwitcher />
 
 Buttons placed on a toolbar with or without label.
 
@@ -53,7 +56,3 @@ Buttons placed on a toolbar with or without label.
   <i class="codicon codicon-file" aria-hidden="true"></i>
 </button>
 ```
-
-## CSS
-
-<Code code={cssSource} lang="css" />
