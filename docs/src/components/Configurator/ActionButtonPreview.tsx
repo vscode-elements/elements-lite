@@ -1,9 +1,8 @@
-import clsx from "clsx";
 import type { IconName, IconType } from "./widgets/Icon";
 import Icon from "./widgets/Icon";
 import PreviewBase from "./widgets/PreviewBase";
 
-export default function ButtonPreview({
+export default function ActionButtonPreview({
   caption,
   disabled,
   icon,

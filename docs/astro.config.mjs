@@ -36,6 +36,7 @@ export default defineConfig({
               label: "Action Button",
               slug: "components/action-button/configurator",
             },
+            { label: "Badge", slug: "components/badge/configurator" },
             { label: "Button", slug: "components/button/configurator" },
           ],
         },

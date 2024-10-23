@@ -7,7 +7,7 @@ import ConfiguratorBase from "./widgets/ConfiguratorBase";
 import Textfield from "./widgets/Textfield";
 import ActionButtonPreview from "./ActionButtonPreview";
 
-export default function ButtonConfigurator() {
+export default function ActionButtonConfigurator() {
   const [caption, setCaption] = useState("Action Button");
   const [disabled, setDisabled] = useState(false);
   const [icon, setIcon] = useState("file");
@@ -40,3 +40,5 @@ export default function ButtonConfigurator() {
     </ConfiguratorBase>
   );
 }
+
+ActionButtonConfigurator.displayName = 'ActionButtonConfigurator';

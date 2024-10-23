@@ -7,7 +7,7 @@ import ImportPlayground from "@components/ImportPlayground.astro";
 import PageSwitcher from "@components/PageSwitcher.astro";
 
 import "@vscode-elements/elements-lite/components/button/button.css";
-import ButtonConfigurator from "@components/Configurator/ButtonConfigurator";
+import Configurator from "@components/Configurator/ButtonConfigurator";
 import cssSource from "@vscode-elements/elements-lite/components/button/button.css?raw";
 
 <ImportPlayground />
@@ -16,7 +16,7 @@ import cssSource from "@vscode-elements/elements-lite/components/button/button.c
 
 ## Configurator
 
-<ButtonConfigurator client:load />
+<Configurator client:idle />
 
 ## CSS
 
