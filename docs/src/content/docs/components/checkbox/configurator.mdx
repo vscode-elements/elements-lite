@@ -1,0 +1,23 @@
+---
+title: Checkbox
+---
+
+import { Code } from "@astrojs/starlight/components";
+import ImportPlayground from "@components/ImportPlayground.astro";
+import PageSwitcher from "@components/PageSwitcher.astro";
+
+import "@vscode-elements/elements-lite/components/checkbox/checkbox.css";
+import Configurator from "@components/Configurator/CheckboxConfigurator";
+import cssSource from "@vscode-elements/elements-lite/components/checkbox/checkbox.css?raw";
+
+<ImportPlayground />
+
+<PageSwitcher />
+
+## Configurator
+
+<Configurator client:idle />
+
+## CSS
+
+<Code code={cssSource} lang="css" />
