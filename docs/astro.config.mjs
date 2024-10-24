@@ -27,6 +27,7 @@ export default defineConfig({
             { label: "Action Button", slug: "components/action-button" },
             { label: "Badge", slug: "components/badge" },
             { label: "Button", slug: "components/button" },
+            { label: "Checkbox", slug: "components/checkbox" },
           ],
         },
         {
@@ -38,6 +39,7 @@ export default defineConfig({
             },
             { label: "Badge", slug: "components/badge/configurator" },
             { label: "Button", slug: "components/button/configurator" },
+            { label: "Checkbox", slug: "components/checkbox/configurator" },
           ],
         },
       ],
