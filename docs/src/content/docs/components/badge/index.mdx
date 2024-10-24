@@ -2,10 +2,13 @@
 title: Badge
 ---
 
-import "@vscode-elements/elements-lite/components/badge/badge.css";
-import cssSource from "@vscode-elements/elements-lite/components/badge/badge.css?raw";
 import { Code } from "@astrojs/starlight/components";
 import VscodeDemo from "@components/VscodeDemo.astro";
+import PageSwitcher from "@components/PageSwitcher.astro";
+
+import "@vscode-elements/elements-lite/components/badge/badge.css";
+
+<PageSwitcher />
 
 Indicates status information from the system.
 
@@ -40,7 +43,3 @@ The same style as the counters in the activity bar.
 ```html "activity-bar-counter"
 <span class="vscode-badge activity-bar-counter">42</span>
 ```
-
-## CSS
-
-<Code code={cssSource} lang="css" />

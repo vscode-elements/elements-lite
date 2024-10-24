@@ -6,9 +6,8 @@ import { Code } from "@astrojs/starlight/components";
 import PageSwitcher from "@components/PageSwitcher.astro";
 import VscodeDemo from "@components/VscodeDemo.astro";
 
+import "@vscode/codicons/dist/codicon.css";
 import "@vscode-elements/elements-lite/components/button/button.css";
-import cssSource from "@vscode-elements/elements-lite/components/button/button.css?raw";
-import ButtonConfigurator from "@components/Configurator/ButtonConfigurator";
 
 <PageSwitcher />
 
@@ -38,20 +37,16 @@ Button.
 <button type="button" class="vscode-button secondary">Secondary Button</button>
 ```
 
-## Large Button
+## Block Button
 
 Same size as the call to action buttons in the sidebar like "Commit" and "Run and Debug".
 
 <VscodeDemo>
-  <button type="button" class="vscode-button large">
-    Large Button
+  <button type="button" class="vscode-button block">
+    Block Button
   </button>
 </VscodeDemo>
 
-```html "large"
-<button type="button" class="vscode-button large">Large Button</button>
+```html "block"
+<button type="button" class="vscode-button block">Block Button</button>
 ```
-
-## CSS
-
-<Code code={cssSource} lang="css" />

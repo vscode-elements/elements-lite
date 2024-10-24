@@ -1,0 +1,8 @@
+.Textfield label {
+  display: block;
+  width: 100%;
+}
+
+.Textfield input {
+  width: 300px;
+}

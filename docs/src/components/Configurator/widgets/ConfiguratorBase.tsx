@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import clsx from "clsx";
 import styles from "./ConfiguratorBase.module.css";
 
 export default function ConfiguratorBase({
@@ -7,8 +8,8 @@ export default function ConfiguratorBase({
   children: ReactNode;
 }) {
   return (
-    <div className={styles.ConfiguratorBase}>
-      <div>{children}</div>
+    <div className={clsx(styles.ConfiguratorBase, "not-content")}>
+      {children}
     </div>
   );
 }

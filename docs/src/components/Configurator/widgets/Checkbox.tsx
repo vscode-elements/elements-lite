@@ -1,5 +1,6 @@
 import { useId } from "react";
 import styles from "./Checkbox.module.css";
+import clsx from "clsx";
 
 export default function Checkbox({
   label,
@@ -13,7 +14,7 @@ export default function Checkbox({
   const id = useId();
 
   return (
-    <div className={styles.Checkbox}>
+    <div className={clsx(styles.Checkbox, "form-group")}>
       <input
         type="checkbox"
         id={id}

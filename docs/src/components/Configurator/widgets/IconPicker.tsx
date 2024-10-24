@@ -1,4 +1,4 @@
-import { useId, useState, type ChangeEvent, type MouseEvent } from "react";
+import { useEffect, useId, useRef, useState, type ChangeEvent } from "react";
 import { iconNames } from "./icons";
 import styles from "./IconPicker.module.css";
 import clsx from "clsx";
@@ -15,20 +15,38 @@ export default function IconPicker({
   const id = useId();
   const [filter, setFilter] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (ev: Event) => {
+      if (!(ev.target as HTMLElement).closest(`.${styles.dropdown}`)) {
+        setShowDropdown(false);
+      }
+    };
+
+    if (showDropdown) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [showDropdown]);
 
   const handleInputChange = (ev: ChangeEvent<HTMLInputElement>) => {
     setFilter(ev.target.value);
   };
 
   return (
-    <div className={clsx(styles.IconPicker, "not-content")}>
+    <div className={clsx(styles.IconPicker, "form-group")}>
       <label htmlFor={id}>{label}</label>
       <div className={styles.buttons}>
         <button
-          onClick={() => {
+          onClick={(ev) => {
+            ev.stopPropagation();
             setShowDropdown(!showDropdown);
           }}
-          className={styles.actionButton}
+          className={clsx(styles.actionButton, styles.dropdownOpen)}
         >
           <i
             className={clsx("codicon", {
@@ -42,15 +60,16 @@ export default function IconPicker({
           onClick={() => {
             setState("");
           }}
-          className={styles.actionButton}
+          className={clsx(styles.actionButton, styles.reset)}
           disabled={!state}
+          title="Reset"
         >
           <i className="codicon codicon-close"></i>
-          Reset
+          <span className={styles.text}>Reset</span>
         </button>
       </div>
       {showDropdown ? (
-        <div className={styles.dropdown}>
+        <div className={styles.dropdown} ref={dropdownRef}>
           <div className={styles.formControl}>
             <input
               type="text"

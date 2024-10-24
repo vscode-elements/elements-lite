@@ -1,15 +1,17 @@
 import clsx from "clsx";
-import type { IconName, IconType } from "./Icon";
-import Icon from "./Icon";
-import PreviewBase from "./PreviewBase";
+import type { IconName, IconType } from "./widgets/Icon";
+import Icon from "./widgets/Icon";
+import PreviewBase from "./widgets/PreviewBase";
 
 export default function ButtonPreview({
+  caption,
   block,
   secondary,
   iconBefore,
   iconAfter,
   iconType,
 }: {
+  caption: string;
   block: boolean;
   secondary: boolean;
   iconBefore: string;
@@ -25,7 +27,7 @@ export default function ButtonPreview({
         {iconBefore ? (
           <Icon name={iconBefore as IconName} iconType={iconType} />
         ) : null}
-        <span>Button Example</span>
+        <span>{caption}</span>
         {iconAfter ? (
           <Icon name={iconAfter as IconName} iconType={iconType} />
         ) : null}
