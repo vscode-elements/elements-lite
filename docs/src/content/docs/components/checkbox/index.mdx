@@ -3,8 +3,10 @@ title: Checkbox
 ---
 
 import { Code } from "@astrojs/starlight/components";
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 import PageSwitcher from "@components/PageSwitcher.astro";
 import VscodeDemo from "@components/VscodeDemo.astro";
+import IndeterminateExample from "./IndeterminateExample.astro";
 
 import "@vscode/codicons/dist/codicon.css";
 import "@vscode-elements/elements-lite/components/checkbox/checkbox.css";
@@ -16,11 +18,241 @@ Checkbox.
 ## Basic example
 
 <VscodeDemo>
-  <button type="button" class="vscode-button">
-    Primary Button
-  </button>
+  <div class="vscode-checkbox">
+    <input type="checkbox" id="checkbox-1" />
+    <label for="checkbox-1">
+      <span class="icon">
+        <i class="codicon codicon-check icon-checked"></i>
+        <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+      </span>
+      <span class="text">
+        Checkbox example
+      </span>
+    </label>
+  </div>
 </VscodeDemo>
 
 ```html
-<button type="button" class="vscode-button">Primary Button</button>
+<div class="vscode-checkbox">
+  <input type="checkbox" id="checkbox-1">
+  <label for="checkbox-1">
+    <span class="icon">
+      <i class="codicon codicon-check icon-checked"></i>
+      <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+    </span>
+    <span class="text">
+      Checkbox example
+    </span>
+  </label>
+</div>
+```
+
+# Indeterminate checkbox
+
+Indeterminated state is applied on checkbox. [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/indeterminate)
+
+<VscodeDemo>
+  <IndeterminateExample />
+</VscodeDemo>
+
+<Tabs>
+  <TabItem label="HTML">
+    ```html
+    <div class="vscode-checkbox">
+      <input type="checkbox" id="checkbox-2">
+      <label for="checkbox-2">
+        <span class="icon">
+          <i class="codicon codicon-check icon-checked"></i>
+          <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+        </span>
+        <span class="text">
+          Indeterminate checkbox
+        </span>
+      </label>
+    </div>
+    ```
+  </TabItem>
+  <TabItem label="JavaScript">
+    ```javascript
+    document.querySelector("#checkbox-2").indeterminate = true;
+    ```
+  </TabItem>
+</Tabs>
+
+## Invalid checkbox
+
+<VscodeDemo>
+  <div class="vscode-checkbox">
+    <input type="checkbox" id="checkbox-3" required />
+    <label for="checkbox-3">
+      <span class="icon">
+        <i class="codicon codicon-check icon-checked"></i>
+        <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+      </span>
+      <span class="text">
+        Checkbox example
+      </span>
+    </label>
+  </div>
+</VscodeDemo>
+
+```html "required"
+<div class="vscode-checkbox">
+  <input type="checkbox" id="checkbox-3" required>
+  <label for="checkbox-3">
+    <span class="icon">
+      <i class="codicon codicon-check icon-checked"></i>
+      <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+    </span>
+    <span class="text">
+      Checkbox example
+    </span>
+  </label>
+</div>
+```
+
+## Checkbox group
+
+Multiple checkboxes can be grouped together. The default layout is horizontal.
+
+<VscodeDemo>
+  <div class="vscode-checkbox-group">
+    <div class="vscode-checkbox">
+      <input type="checkbox" id="group-1-checkbox-1" />
+      <label for="group-1-checkbox-1">
+        <span class="icon">
+          <i class="codicon codicon-check icon-checked"></i>
+          <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+        </span>
+        <span class="text">Lorem</span>
+      </label>
+    </div>
+    <div class="vscode-checkbox">
+      <input type="checkbox" id="group-1-checkbox-2" />
+      <label for="group-1-checkbox-2">
+        <span class="icon">
+          <i class="codicon codicon-check icon-checked"></i>
+          <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+        </span>
+        <span class="text">Ipsum</span>
+      </label>
+    </div>
+    <div class="vscode-checkbox">
+      <input type="checkbox" id="group-1-checkbox-3" />
+      <label for="group-1-checkbox-3">
+        <span class="icon">
+          <i class="codicon codicon-check icon-checked"></i>
+          <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+        </span>
+        <span class="text">Dolor</span>
+      </label>
+    </div>
+  </div>
+</VscodeDemo>
+
+```html
+<div class="vscode-checkbox-group">
+  <div class="vscode-checkbox">
+    <input type="checkbox" id="group-1-checkbox-1">
+    <label for="group-1-checkbox-1">
+      <span class="icon">
+        <i class="codicon codicon-check icon-checked"></i>
+        <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+      </span>
+      <span class="text">Lorem</span>
+    </label>
+  </div>
+  <div class="vscode-checkbox">
+    <input type="checkbox" id="group-1-checkbox-2">
+    <label for="group-1-checkbox-2">
+      <span class="icon">
+        <i class="codicon codicon-check icon-checked"></i>
+        <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+      </span>
+      <span class="text">Ipsum</span>
+    </label>
+  </div>
+  <div class="vscode-checkbox">
+    <input type="checkbox" id="group-1-checkbox-3">
+    <label for="group-1-checkbox-3">
+      <span class="icon">
+        <i class="codicon codicon-check icon-checked"></i>
+        <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+      </span>
+      <span class="text">Dolor</span>
+    </label>
+  </div>
+</div>
+```
+
+## Vertical checkbox group
+
+<VscodeDemo>
+  <div class="vscode-checkbox-group vertical">
+    <div class="vscode-checkbox">
+      <input type="checkbox" id="group-2-checkbox-1" />
+      <label for="group-2-checkbox-1">
+        <span class="icon">
+          <i class="codicon codicon-check icon-checked"></i>
+          <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+        </span>
+        <span class="text">Lorem</span>
+      </label>
+    </div>
+    <div class="vscode-checkbox">
+      <input type="checkbox" id="group-2-checkbox-2" />
+      <label for="group-2-checkbox-2">
+        <span class="icon">
+          <i class="codicon codicon-check icon-checked"></i>
+          <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+        </span>
+        <span class="text">Ipsum</span>
+      </label>
+    </div>
+    <div class="vscode-checkbox">
+      <input type="checkbox" id="group-2-checkbox-3" />
+      <label for="group-2-checkbox-3">
+        <span class="icon">
+          <i class="codicon codicon-check icon-checked"></i>
+          <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+        </span>
+        <span class="text">Dolor</span>
+      </label>
+    </div>
+  </div>
+</VscodeDemo>
+
+```html "vertical"
+<div class="vscode-checkbox-group vertical">
+  <div class="vscode-checkbox">
+    <input type="checkbox" id="group-2-checkbox-1">
+    <label for="group-2-checkbox-1">
+      <span class="icon">
+        <i class="codicon codicon-check icon-checked"></i>
+        <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+      </span>
+      <span class="text">Lorem</span>
+    </label>
+  </div>
+  <div class="vscode-checkbox">
+    <input type="checkbox" id="group-2-checkbox-2">
+    <label for="group-2-checkbox-2">
+      <span class="icon">
+        <i class="codicon codicon-check icon-checked"></i>
+        <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+      </span>
+      <span class="text">Ipsum</span>
+    </label>
+  </div>
+  <div class="vscode-checkbox">
+    <input type="checkbox" id="group-2-checkbox-3">
+    <label for="group-2-checkbox-3">
+      <span class="icon">
+        <i class="codicon codicon-check icon-checked"></i>
+        <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+      </span>
+      <span class="text">Dolor</span>
+    </label>
+  </div>
+</div>
 ```
