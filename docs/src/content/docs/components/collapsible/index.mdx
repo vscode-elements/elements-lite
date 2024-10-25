@@ -1,0 +1,253 @@
+---
+title: Collapsible
+---
+
+import { Code } from "@astrojs/starlight/components";
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+import PageSwitcher from "@components/PageSwitcher.astro";
+import VscodeDemo from "@components/VscodeDemo.astro";
+import ActionsExample from "./ActionsExample.astro";
+
+import "@vscode/codicons/dist/codicon.css";
+import "@vscode-elements/elements-lite/components/collapsible/collapsible.css";
+import "@vscode-elements/elements-lite/components/action-button/action-button.css";
+
+<PageSwitcher />
+
+Collapsible is based on the `<details>` HTML element. [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
+
+## Basic example
+
+<VscodeDemo>
+  <details class="vscode-collapsible">
+    <summary>
+      <i class="codicon codicon-chevron-right icon-arrow"></i>
+      <h2 class="title">Collapsible</h2>
+    </summary>
+    <div>
+      <p>Collapsible content.</p>
+    </div>
+  </details>
+</VscodeDemo>
+
+```html
+<details class="vscode-collapsible">
+  <summary>
+    <i class="codicon codicon-chevron-right icon-arrow"></i>
+    <h2 class="title">Collapsible</h2>
+  </summary>
+  <div>
+    <p>Collapsible content.</p>
+  </div>
+</details>
+```
+
+## Initially open
+
+<VscodeDemo>
+  <details class="vscode-collapsible" open>
+    <summary>
+      <i class="codicon codicon-chevron-right icon-arrow"></i>
+      <h2 class="title">Collapsible</h2>
+    </summary>
+    <div>
+      <p>Collapsible content.</p>
+    </div>
+  </details>
+</VscodeDemo>
+
+```html "open"
+<details class="vscode-collapsible" open>
+  <summary>
+    <i class="codicon codicon-chevron-right icon-arrow"></i>
+    <h2 class="title">Collapsible</h2>
+  </summary>
+  <div>
+    <p>Collapsible content.</p>
+  </div>
+</details>
+```
+
+## Description
+
+Additional information in the header. It is only visible when component is open.
+
+<VscodeDemo>
+  <details class="vscode-collapsible">
+    <summary>
+      <i class="codicon codicon-chevron-right icon-arrow"></i>
+      <h2 class="title">
+        Collapsible <span class="description">Collapsible description</span>
+      </h2>
+    </summary>
+    <div>
+      <p>Collapsible content.</p>
+    </div>
+  </details>
+</VscodeDemo>
+
+```html "<span class="description">Collapsible description</span>"
+<details class="vscode-collapsible">
+  <summary>
+    <i class="codicon codicon-chevron-right icon-arrow"></i>
+    <h2 class="title">
+      Collapsible <span class="description">Collapsible description</span>
+    </h2>
+  </summary>
+  <div>
+    <p>Collapsible content.</p>
+  </div>
+</details>
+```
+
+## Actions
+
+Actions are clickable buttons in the header when the `Collapsible` component is open and the cursor hovers over it.
+
+<VscodeDemo>
+  <details class="vscode-collapsible">
+    <summary>
+      <i class="codicon codicon-chevron-right icon-arrow"></i>
+      <h2 class="title">Timeline</h2>
+      <div class="actions">
+        <button type="button" class="vscode-action-button" title="New File">
+          <i class="codicon codicon-new-file" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="vscode-action-button" title="New Folder">
+          <i class="codicon codicon-new-folder" aria-hidden="true"></i>
+        </button>
+      </div>
+    </summary>
+    <div>
+      <p>Collapsible content.</p>
+    </div>
+  </details>
+</VscodeDemo>
+
+```html {5-12}
+<details class="vscode-collapsible">
+  <summary>
+    <i class="codicon codicon-chevron-right icon-arrow"></i>
+    <h2 class="title">Timeline</h2>
+    <div class="actions">
+      <button type="button" class="vscode-action-button" title="New File">
+        <i class="codicon codicon-new-file" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="vscode-action-button" title="New Folder">
+        <i class="codicon codicon-new-folder" aria-hidden="true"></i>
+      </button>
+    </div>
+  </summary>
+  <div>
+    <p>Collapsible content.</p>
+  </div>
+</details>
+```
+
+## Always show actions
+
+Actions are always visible when `Collapsible` is open. It is intended to reflect the `workbench.view.alwaysShowHeaderActions` option.
+
+<VscodeDemo>
+  <details class="vscode-collapsible always-show-actions">
+    <summary>
+      <i class="codicon codicon-chevron-right icon-arrow"></i>
+      <h2 class="title">Timeline</h2>
+      <div class="actions">
+        <button type="button" class="vscode-action-button" title="New File">
+          <i class="codicon codicon-new-file" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="vscode-action-button" title="New Folder">
+          <i class="codicon codicon-new-folder" aria-hidden="true"></i>
+        </button>
+      </div>
+    </summary>
+    <div>
+      <p>Collapsible content.</p>
+    </div>
+  </details>
+</VscodeDemo>
+
+```html "always-show-actions"
+<details class="vscode-collapsible always-show-actions">
+  <summary>
+    <i class="codicon codicon-chevron-right icon-arrow"></i>
+    <h2 class="title">Timeline</h2>
+    <div class="actions">
+      <button type="button" class="vscode-action-button" title="New File">
+        <i class="codicon codicon-new-file" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="vscode-action-button" title="New Folder">
+        <i class="codicon codicon-new-folder" aria-hidden="true"></i>
+      </button>
+    </div>
+  </summary>
+  <div>
+    <p>Collapsible content.</p>
+  </div>
+</details>
+```
+
+## Exclusive accordion mode
+
+Multiple `Collapsible` components connected together, where only one can be open at a time. [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement/name)
+
+<VscodeDemo>
+  <details class="vscode-collapsible" name="accordion-example">
+    <summary>
+      <i class="codicon codicon-chevron-right icon-arrow"></i>
+      <h2 class="title">Collapsible 1</h2>
+    </summary>
+    <div>
+      <p>Collapsible 1 content.</p>
+    </div>
+  </details>
+  <details class="vscode-collapsible" name="accordion-example">
+    <summary>
+      <i class="codicon codicon-chevron-right icon-arrow"></i>
+      <h2 class="title">Collapsible 2</h2>
+    </summary>
+    <div>
+      <p>Collapsible 2 content.</p>
+    </div>
+  </details>
+  <details class="vscode-collapsible" name="accordion-example">
+    <summary>
+      <i class="codicon codicon-chevron-right icon-arrow"></i>
+      <h2 class="title">Collapsible 3</h2>
+    </summary>
+    <div>
+      <p>Collapsible 3 content.</p>
+    </div>
+  </details>
+</VscodeDemo>
+
+```html "name="accordion-example""
+<details class="vscode-collapsible" name="accordion-example">
+  <summary>
+    <i class="codicon codicon-chevron-right icon-arrow"></i>
+    <h2 class="title">Collapsible 1</h2>
+  </summary>
+  <div>
+    <p>Collapsible 1 content.</p>
+  </div>
+</details>
+<details class="vscode-collapsible" name="accordion-example">
+  <summary>
+    <i class="codicon codicon-chevron-right icon-arrow"></i>
+    <h2 class="title">Collapsible 2</h2>
+  </summary>
+  <div>
+    <p>Collapsible 2 content.</p>
+  </div>
+</details>
+<details class="vscode-collapsible" name="accordion-example">
+  <summary>
+    <i class="codicon codicon-chevron-right icon-arrow"></i>
+    <h2 class="title">Collapsible 3</h2>
+  </summary>
+  <div>
+    <p>Collapsible 3 content.</p>
+  </div>
+</details>
+```

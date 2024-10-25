@@ -28,6 +28,7 @@ export default defineConfig({
             { label: "Badge", slug: "components/badge" },
             { label: "Button", slug: "components/button" },
             { label: "Checkbox", slug: "components/checkbox" },
+            { label: "Collapsible", slug: "components/collapsible" },
           ],
         },
         {
@@ -40,6 +41,7 @@ export default defineConfig({
             { label: "Badge", slug: "components/badge/configurator" },
             { label: "Button", slug: "components/button/configurator" },
             { label: "Checkbox", slug: "components/checkbox/configurator" },
+            { label: "Collapsible", slug: "components/collapsible/configurator" },
           ],
         },
       ],
