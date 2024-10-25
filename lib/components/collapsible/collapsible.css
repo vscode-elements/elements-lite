@@ -1,6 +1,3 @@
-.vscode-collapsible {
-}
-
 .vscode-collapsible + .vscode-collapsible {
   border-top: 1px solid var(--vscode-sideBarSectionHeader-border);
 }
@@ -23,12 +20,12 @@
   outline-color: var(--vscode-focusBorder);
 }
 
-.vscode-collapsible .codicon-chevron-right {
+.vscode-collapsible .icon-arrow {
   display: block;
   margin: 0 3px;
 }
 
-.vscode-collapsible[open] .codicon-chevron-right {
+.vscode-collapsible[open] .icon-arrow {
   transform: rotate(90deg);
 }
 
@@ -46,20 +43,26 @@
 }
 
 .vscode-collapsible .title .description {
+  display: none;
   font-weight: 400;
   margin-left: 10px;
   text-transform: none;
   opacity: 0.6;
 }
 
-.vscode-collapsible .actions {
-  display: none;
+.vscode-collapsible[open] .title .description {
+  display: inline;
 }
 
-.vscode-collapsible[open] summary .actions {
+.vscode-collapsible .actions {
   align-items: center;
-  display: flex;
+  display: none;
   height: 22px;
   margin-left: auto;
   margin-right: 4px;
+}
+
+.vscode-collapsible.always-show-actions[open] summary .actions,
+.vscode-collapsible[open]:hover summary .actions {
+  display: flex;
 }

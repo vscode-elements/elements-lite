@@ -1,0 +1,26 @@
+<details class="vscode-collapsible">
+  <summary>
+    <i class="codicon codicon-chevron-right"></i>
+    <h2 class="title">Timeline</h2>
+    <div class="actions">
+      <button type="button" class="vscode-action-button" title="New File">
+        <i class="codicon codicon-new-file" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="vscode-action-button" title="New Folder">
+        <i class="codicon codicon-new-folder" aria-hidden="true"></i>
+      </button>
+    </div>
+  </summary>
+  <div>
+    <p>Collapsible content.</p>
+  </div>
+</details>
+
+<script>
+  document.querySelector("#button-1")?.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+  document.querySelector("#button-2")?.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+</script>

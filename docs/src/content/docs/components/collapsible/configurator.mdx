@@ -1,0 +1,24 @@
+---
+title: Collapsible
+---
+
+import { Code } from "@astrojs/starlight/components";
+import ImportPlayground from "@components/ImportPlayground.astro";
+import PageSwitcher from "@components/PageSwitcher.astro";
+
+import "@vscode-elements/elements-lite/components/action-button/action-button.css";
+import "@vscode-elements/elements-lite/components/collapsible/collapsible.css";
+import Configurator from "@components/Configurator/CollapsibleConfigurator";
+import cssSource from "@vscode-elements/elements-lite/components/collapsible/collapsible.css?raw";
+
+<ImportPlayground />
+
+<PageSwitcher />
+
+## Configurator
+
+<Configurator client:idle />
+
+## CSS
+
+<Code code={cssSource} lang="css" />
