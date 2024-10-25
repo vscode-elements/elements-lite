@@ -6,6 +6,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://vscode-elements.github.io/elements-lite",
+  base: "elements-lite",
   integrations: [
     starlight({
       title: "VSCode Elements Lite",
