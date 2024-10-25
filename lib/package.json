@@ -3,6 +3,10 @@
   "version": "0.2.0",
   "description": "",
   "main": "elements-lite.css",
+  "files": [
+    "index.css",
+    "components/**/*.css"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "wds --node-resolve --watch",
