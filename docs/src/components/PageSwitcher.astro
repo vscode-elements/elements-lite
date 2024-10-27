@@ -4,9 +4,9 @@ const hasTrailingSlash = pathname.endsWith("/");
 const isConfigurator = hasTrailingSlash
   ? pathname.endsWith("configurator/")
   : pathname.endsWith("configurator");
-const componentName = Astro.url.pathname.split("/")[2];
-const docsUrl = `/components/${componentName}${hasTrailingSlash ? "/" : ""}`;
-const confUrl = `/components/${componentName}/configurator${hasTrailingSlash ? "/" : ""}`;
+const componentName = Astro.url.pathname.split("/")[3];
+const docsUrl = `/elements-lite/components/${componentName}${hasTrailingSlash ? "/" : ""}`;
+const confUrl = `/elements-lite/components/${componentName}/configurator${hasTrailingSlash ? "/" : ""}`;
 ---
 
 <style>
