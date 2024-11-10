@@ -1,0 +1,115 @@
+---
+title: Form Group
+---
+
+import { Code } from "@astrojs/starlight/components";
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+import PageSwitcher from "@components/PageSwitcher.astro";
+import VscodeDemo from "@components/VscodeDemo.astro";
+
+import "@vscode/codicons/dist/codicon.css";
+import "@vscode-elements/elements-lite/components/label/label.css";
+import "@vscode-elements/elements-lite/components/form-group/form-group.css";
+import "@vscode-elements/elements-lite/components/form-helper/form-helper.css";
+import "@vscode-elements/elements-lite/components/textarea/textarea.css";
+import "@vscode-elements/elements-lite/components/textfield/textfield.css";
+
+<PageSwitcher />
+
+Collapsible is based on the `<details>` HTML element. [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)
+
+## Basic example
+
+<VscodeDemo>
+  <div class="vscode-form-group">
+    <label for="textfield1" class="vscode-label">
+      Label example
+    </label>
+    <input type="text" id="textfield1" class="vscode-textfield" />
+    <div class="vscode-form-helper">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        faucibus imperdiet sapien, a gravida dolor.
+      </p>
+    </div>
+  </div>
+</VscodeDemo>
+
+```html
+<div class="vscode-form-group">
+  <label for="textfield1" class="vscode-label">Label example</label>
+  <input type="text" id="textfield1" class="vscode-textfield" />
+  <div class="vscode-form-helper">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      faucibus imperdiet sapien, a gravida dolor.
+    </p>
+  </div>
+</div>
+```
+
+## Vertical layout
+
+<VscodeDemo>
+  <div class="vscode-form-group vertical">
+    <label for="textfield2" class="vscode-label">
+      Label example
+    </label>
+    <input type="text" id="textfield2" class="vscode-textfield" />
+    <div class="vscode-form-helper">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        faucibus imperdiet sapien, a gravida dolor.
+      </p>
+    </div>
+  </div>
+</VscodeDemo>
+
+```html "vertical"
+<div class="vscode-form-group vertical">
+  <label for="textfield2" class="vscode-label">Label example</label>
+  <input type="text" id="textfield2" class="vscode-textfield" />
+  <div class="vscode-form-helper">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      faucibus imperdiet sapien, a gravida dolor.
+    </p>
+  </div>
+</div>
+```
+
+## Settings Group
+
+<VscodeDemo>
+  <div class="vscode-form-group settings-group">
+    <label for="textfield3" class="vscode-label">
+      <span class="pale">Editor:</span> Font Family
+    </label>
+    <div class="vscode-form-helper">
+      <p>Controls the font family.</p>
+    </div>
+    <input
+      type="text"
+      id="textfield3"
+      class="vscode-textfield"
+      value="'JetBrains Mono', 'Cascadia Code', Consolas, 'Courier New', monospace"
+    />
+  </div>
+</VscodeDemo>
+
+```html "settings-group"
+<div class="vscode-form-group settings-group">
+  <label for="textfield3" class="vscode-label">
+    <span class="pale">Editor:</span> Font Family
+  </label>
+  <div class="vscode-form-helper">
+    <p>Controls the font family.</p>
+  </div>
+  <input
+    type="text"
+    id="textfield3"
+    class="vscode-textfield"
+    value="'JetBrains Mono', 'Cascadia Code', Consolas, 'Courier New', monospace"
+  >
+</div>
+```
