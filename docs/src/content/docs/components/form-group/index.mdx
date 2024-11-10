@@ -8,9 +8,11 @@ import PageSwitcher from "@components/PageSwitcher.astro";
 import VscodeDemo from "@components/VscodeDemo.astro";
 
 import "@vscode/codicons/dist/codicon.css";
+import "@vscode-elements/elements-lite/components/checkbox/checkbox.css";
 import "@vscode-elements/elements-lite/components/label/label.css";
 import "@vscode-elements/elements-lite/components/form-group/form-group.css";
 import "@vscode-elements/elements-lite/components/form-helper/form-helper.css";
+import "@vscode-elements/elements-lite/components/select/select.css";
 import "@vscode-elements/elements-lite/components/textarea/textarea.css";
 import "@vscode-elements/elements-lite/components/textfield/textfield.css";
 
@@ -110,6 +112,95 @@ Collapsible is based on the `<details>` HTML element. [MDN Reference](https://de
     id="textfield3"
     class="vscode-textfield"
     value="'JetBrains Mono', 'Cascadia Code', Consolas, 'Courier New', monospace"
-  >
+  />
 </div>
 ```
+
+## With Select
+
+<VscodeDemo>
+  <div class="vscode-form-group settings-group">
+    <label for="select-1" class="vscode-label">
+      Form Group with Select
+    </label>
+    <div class="vscode-select">
+      <select name="select-1" id="select-1">
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="hamster">Hamster</option>
+        <option value="parrot">Parrot</option>
+        <option value="spider">Spider</option>
+        <option value="goldfish">Goldfish</option>
+      </select>
+      <span class="chevron-icon">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"
+          />
+        </svg>
+      </span>
+    </div>
+    <div class="vscode-form-helper">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        faucibus imperdiet sapien, a gravida dolor.
+      </p>
+    </div>
+  </div>
+</VscodeDemo>
+
+## With Checkbox
+
+<VscodeDemo>
+  <div class="vscode-form-group settings-group">
+    <label for="select-1" class="vscode-label">
+      Form Group with Select
+    </label>
+    <div class="vscode-checkbox-group">
+      <div class="vscode-checkbox">
+        <input type="checkbox" id="group-1-checkbox-1" />
+        <label for="group-1-checkbox-1">
+          <span class="icon">
+            <i class="codicon codicon-check icon-checked"></i>
+            <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+          </span>
+          <span class="text">Lorem</span>
+        </label>
+      </div>
+      <div class="vscode-checkbox">
+        <input type="checkbox" id="group-1-checkbox-2" />
+        <label for="group-1-checkbox-2">
+          <span class="icon">
+            <i class="codicon codicon-check icon-checked"></i>
+            <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+          </span>
+          <span class="text">Ipsum</span>
+        </label>
+      </div>
+      <div class="vscode-checkbox">
+        <input type="checkbox" id="group-1-checkbox-3" />
+        <label for="group-1-checkbox-3">
+          <span class="icon">
+            <i class="codicon codicon-check icon-checked"></i>
+            <i class="codicon codicon-chrome-minimize icon-indeterminate"></i>
+          </span>
+          <span class="text">Dolor</span>
+        </label>
+      </div>
+    </div>
+    <div class="vscode-form-helper">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        faucibus imperdiet sapien, a gravida dolor.
+      </p>
+    </div>
+  </div>
+</VscodeDemo>
