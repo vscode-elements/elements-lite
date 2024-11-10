@@ -36,6 +36,7 @@ export default defineConfig({
             { label: "Button", slug: "components/button" },
             { label: "Checkbox", slug: "components/checkbox" },
             { label: "Collapsible", slug: "components/collapsible" },
+            { label: "Divider", slug: "components/divider" },
           ],
         },
         {
@@ -49,6 +50,7 @@ export default defineConfig({
             { label: "Button", slug: "components/button/configurator" },
             { label: "Checkbox", slug: "components/checkbox/configurator" },
             { label: "Collapsible", slug: "components/collapsible/configurator" },
+            { label: "Divider", slug: "components/divider/configurator" },
           ],
         },
       ],

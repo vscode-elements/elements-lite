@@ -1,0 +1,24 @@
+---
+title: Divider
+---
+
+import { Code } from "@astrojs/starlight/components";
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+import PageSwitcher from "@components/PageSwitcher.astro";
+import VscodeDemo from "@components/VscodeDemo.astro";
+
+import "@vscode-elements/elements-lite/components/divider/divider.css";
+
+<PageSwitcher />
+
+A styled `<hr>` element.
+
+## Basic example
+
+<VscodeDemo>
+  <hr class="vscode-divider" />
+</VscodeDemo>
+
+```html
+<hr class="vscode-divider">
+```
