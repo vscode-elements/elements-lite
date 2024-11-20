@@ -1,0 +1,72 @@
+.vscode-table {
+  background-color: var(--vscode-editor-background);
+  border-collapse: collapse;
+}
+
+.vscode-table thead th {
+  background-color: var(--vscode-keybindingTable-headerBackground);
+  box-sizing: border-box;
+  color: var(--vscode-foreground);
+  display: table-cell;
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  font-weight: bold;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 5px 0px 5px 10px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vscode-table.fixed-header thead {
+  background-color: var(--vscode-editor-background);
+  position: sticky;
+  top: 0;
+}
+
+/* .vscode-table.fixed-header.bordered-rows thead {
+  border-bottom-color: red;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+} */
+
+.vscode-table.fixed-header.bordered-rows thead:after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: var(--vscode-editorGroup-border);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.vscode-table tbody td {
+  border-bottom-color: var(--vscode-editorGroup-border);
+  border-bottom-style: solid;
+  border-bottom-width: 0;
+  box-sizing: border-box;
+  color: var(--vscode-foreground);
+  display: table-cell;
+  font-family: var(--vscode-font-family);
+  font-size: var(--vscode-font-size);
+  height: 24px;
+  overflow: hidden;
+  padding-left: 10px;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.vscode-table.bordered-rows tbody td {
+  border-bottom-width: 1px;
+}
+
+.vscode-table.zebra tbody tr:nth-child(even) td {
+  background-color: var(--vscode-keybindingTable-rowsBackground);
+}
+
+.vscode-table.bordered-columns tbody td:not(:last-child) {
+  border-right: 1px solid var(--vscode-editorGroup-border);
+}
