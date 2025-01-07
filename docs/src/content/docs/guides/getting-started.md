@@ -7,6 +7,10 @@ deal with TypeScript or bundler configurations. In fact, you don’t even need t
 you prefer not to—just copy the code snippet you need. While VSCode Elements Lite doesn’t cover 
 every case that VSCode Elements does, it’s sufficient for most purposes. You can also use it together with VSCode Elements components.
 
+## Current state of the project
+
+Although the website is still under development, [the components](https://github.com/vscode-elements/elements-lite/tree/main/lib) are ready for production.
+
 ## Using the Configurator
 
 The easiest way to get started is by using the configurator. Set the desired parameters, then copy the generated HTML snippet. 
