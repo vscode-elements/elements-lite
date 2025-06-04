@@ -15,6 +15,14 @@
   },
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vscode-elements/elements-lite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vscode-elements/elements-lite/issues"
+  },
+  "homepage": "https://vscode-elements.github.io/elements-lite",
   "devDependencies": {
     "@awmottaz/prettier-plugin-void-html": "^1.6.1",
     "@vscode-elements/webview-playground": "^1.1.1",
