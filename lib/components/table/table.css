@@ -25,12 +25,6 @@
   top: 0;
 }
 
-/* .vscode-table.fixed-header.bordered-rows thead {
-  border-bottom-color: red;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-} */
-
 .vscode-table.fixed-header.bordered-rows thead:after {
   content: '';
   display: block;
